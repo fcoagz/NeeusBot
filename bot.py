@@ -27,9 +27,9 @@ async def buttons_bot(call: types.CallbackQuery):
     elif call.data == 'help':
         await call.message.answer_photo('https://github.com/fcoagz/NeeusBot/blob/main/assets/example.png?raw=true', ES.HELP)
 
-@dp.message_handler(commands=[COMMANDS['/buscar']])
+@dp.message_handler(commands=[COMMANDS['/donate']])
 async def echo(message: types.message):
-    await message.reply(ES.SEARCH_SONG) 
+    await message.reply(ES.DONATE_FOR_THE_BOT)  
 
 @dp.message_handler(content_types=['text'])
 async def echo(message: types.message):
